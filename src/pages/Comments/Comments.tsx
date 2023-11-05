@@ -1,12 +1,13 @@
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 import { Card, CardContent, List, ListItem, ListItemText, Typography } from '@mui/material'
 
 import type { Comments } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
+import { useAppSelector } from '../../hooks/useAppSelector'
 
 const Comments = () => {
-  const comments = useLoaderData() as Comments[]
-  //console.log(comments);
+  const comments = useAppSelector((state) => state.comments.comments)
+  console.log(comments)
 
   return (
     <>

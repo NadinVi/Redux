@@ -1,35 +1,15 @@
-// import { useEffect, useState } from "react";
-// import JsonPlaseholderAPI from "../../api/JsonPlaseholderAPI/JsonPlaseholderAPI";
-import { useLoaderData, useNavigation } from 'react-router-dom'
+import { useNavigation } from 'react-router-dom'
 
 import { Grid, ImageList, ImageListItem, Typography } from '@mui/material'
 
-import type { Photo } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 import { Loader } from '../../components/Loader/Loader'
+import { useAppSelector } from '../../hooks/useAppSelector'
 
 const Photos = () => {
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [photos, setPhotos] = useState([]);
-
-  // useEffect(() => {
-  //   setIsLoading(true)
-  //   const controller = new AbortController()
-  //   JsonPlaseholderAPI.getPhotos({ signal: controller.signal })
-  //   .then(setPhotos)
-  //   .finally(() => setIsLoading(false))
-
-  //   return () => {
-  //     controller.abort()
-  //   }
-  // }, []);
-
-  // console.log(photos);
-  const photos = useLoaderData() as Photo[]
+  const photos = useAppSelector((state) => state.photos.photos)
   const navigation = useNavigation()
 
   const isLoading = navigation.state === 'loading'
-
-  //console.log({ photos, isLoading });
 
   return (
     <>

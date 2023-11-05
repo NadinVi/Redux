@@ -1,14 +1,12 @@
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { Card, CardContent, List, ListItem, ListItemText, Typography } from '@mui/material'
-
-import { Posts as PostType } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
+import { useAppSelector } from '../../hooks/useAppSelector'
 
 const Posts = () => {
-  const posts = useLoaderData() as PostType[]
-
-  //console.log(users);
-
+  const posts = useAppSelector((state) => state.posts.posts)
+  console.log(posts);
+  
   return (
     <>
       <Typography variant="h5" gutterBottom>
