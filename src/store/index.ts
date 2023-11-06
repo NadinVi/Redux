@@ -3,6 +3,7 @@ import users from './users'
 import posts from './posts'
 import comments from './comments'
 import photos from './photos'
+//import userDetails from './userDetails'
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     users: users,
     posts: posts,
     comments: comments,
+    //userDetails: userDetails,
   }
 })
 

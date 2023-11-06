@@ -56,40 +56,4 @@ const UserDetails = () => {
   )
 }
 
-// const UserDetails = () => {
-//   const user = useLoaderData();
-
-//   return (
-//     <>
-//     <Typography variant='h5' gutterBottom>
-//     User Details
-//   </Typography>
-//   {user && (
-//       <Card>
-//         <CardContent>
-//           <List>
-//             <ListItem>
-//               <ListItemText primary="Name" secondary={user.name}></ListItemText>
-//             </ListItem>
-//             <ListItem>
-//               <ListItemText primary="Username" secondary={user.username}></ListItemText>
-//             </ListItem>
-//             <ListItem>
-//               <ListItemText primary="Email" secondary={user.email}></ListItemText>
-//             </ListItem>
-//             <ListItem>
-//               <ListItemText primary="Phone" secondary={user.phone}></ListItemText>
-//             </ListItem>
-//             <ListItem>
-//               <ListItemText primary="Website" secondary={user.website}></ListItemText>
-//             </ListItem>
-//           </List>
-//         </CardContent>
-//       </Card>
-//     )
-//   }
-//     </>
-//   )
-// }
-
 export { UserDetails }
